@@ -18,7 +18,8 @@
 
   "lint-staged": {
   "*.{js,mjs,cjs}": [
-    "eslint"
+    "eslint",
+    "echo 'lint-staged is running!'"
   ]
 }
 }
