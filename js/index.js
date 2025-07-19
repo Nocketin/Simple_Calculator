@@ -1,4 +1,4 @@
-const hello = 'hi';
-const hi = 'hello';
+const hello = 'hi'
+const hi = 'hello'
 
 console.log(hello, hi);
