@@ -22,6 +22,7 @@ export function updateDisplay(a, sign, b) {
   if (sign) expression += ' ' + sign;
   if (b) expression += ' ' + b;
 
+  expression = expression.replace(/\./g, ',');
   screen.textContent = expression || 0;
   fontSizeChange();
   console.log(a, sign, b);

@@ -1,3 +1,12 @@
+body,
+.calculator,
+.calculator-screen,
+.btn {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
 .calculator {
   margin: 50px auto;
   width: 300px;
@@ -5,7 +14,7 @@
   border-radius: 10px;
   background: #5b5a5a;
   color: #fff;
-  padding-top: 20px;
+  padding-top: 10px;
   box-shadow: 8px 12px 30px #010000c6;
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
@@ -13,20 +22,20 @@
 }
 
 .calculator-screen {
-    height: 60px;
-    padding: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    display: flex;
-    justify-content: end;
-    align-content: center;
-    margin-bottom: 5px;
-  
-    font-size: 4rem;
+  height: 60px;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: end;
+  align-content: center;
+  margin-bottom: 5px;
+
+  font-size: 4rem;
 }
 
-.calculator-screen p{
-    margin: 0;
+.calculator-screen p {
+  margin: 0;
 }
 
 .buttons {
@@ -64,4 +73,76 @@
 
 .btn.zero {
   grid-column: span 2;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aaa;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+body.light {
+  background-color: #424141;
+  color: #000;
+}
+
+body.light .calculator {
+  background: #ffffff;
+  color: #000;
+  box-shadow: 8px 12px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+body.light .btn {
+  background-color: #e0e0e0;
+  color: #303030;
+}
+
+body.light .btn.dark-grey {
+  background-color: #c0c0c0;
+}
+
+body.light .btn.orange {
+  background-color: #ff9500;
+  color: #3f3f3f;
 }

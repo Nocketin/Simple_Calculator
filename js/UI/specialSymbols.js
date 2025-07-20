@@ -1,17 +1,16 @@
 import { state } from '../logic/state.js';
 import { updateDisplay } from './display.js';
-import { digits } from '../logic/constants.js';
-import { inputDigit } from '../logic/inputDigit.js';
+import { specialSymbols } from '../logic/constants.js';
+import { inputSpecial } from '../logic/inputSpecial.js';
 
-export function insertDigits() {
+export function insertSpecial() {
   const buttons = document.querySelector('.buttons');
 
   buttons.addEventListener('click', (event) => {
     const key = event.target.textContent;
 
-    if (!digits.includes(key)) return;
-
-    inputDigit(key);
+    if (!specialSymbols.includes(key)) return;
+    inputSpecial(key);
     updateDisplay(state.a, state.sign, state.b);
   });
 }
