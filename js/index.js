@@ -1,3 +1,4 @@
+import '../css/style.css';
 import { insertDigits } from './UI/digits.js';
 import { insertOperators } from './UI/operators.js';
 import { insertEquals } from './UI/equals.js';
