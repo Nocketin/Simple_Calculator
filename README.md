@@ -3,7 +3,7 @@ Task: https: //docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoa
 How to run the app: 
 1. Необходимо установить зависимости и собрать приложение при помощи webpack:
 npm install и npm run bouild
-2. Запускать приложение с собранного index.hrml в папке dist
+2. Запускать приложение с собранного index.html в папке dist
 
 Структура папок: 
 css: 
